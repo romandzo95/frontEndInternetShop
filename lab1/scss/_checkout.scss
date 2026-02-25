@@ -1,0 +1,208 @@
+// ===========================================
+// Checkout
+// ===========================================
+
+// Checkout Steps
+.checkout-steps {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-2xl;
+    padding: $spacing-md;
+    background-color: $color-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-sm;
+    color: $text-muted;
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        background-color: $color-gray-200;
+        border-radius: $radius-full;
+    }
+
+    &__label {
+        display: none;
+
+        @include sm {
+            display: block;
+        }
+    }
+
+    &--active {
+        color: $color-primary;
+
+        .step__number {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+
+    &--completed {
+        color: $color-success;
+
+        .step__number {
+            background-color: $color-success;
+            color: $color-white;
+        }
+    }
+}
+
+// Checkout Layout
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+
+    @include lg {
+        grid-template-columns: 1fr 400px;
+    }
+}
+
+// Checkout Form
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+}
+
+.checkout-section {
+    padding: $spacing-lg;
+    background-color: $color-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+
+    &__title {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: $spacing-lg;
+        padding-bottom: $spacing-md;
+        border-bottom: 1px solid $border-color;
+    }
+}
+
+// Shipping Options
+.shipping-options {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+}
+
+.shipping-option {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-md;
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        accent-color: $color-primary;
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+    }
+
+    &__name {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+        color: $text-primary;
+    }
+
+    &__time {
+        font-size: $font-size-xs;
+        color: $text-muted;
+    }
+
+    &__price {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+    }
+
+    &--selected,
+    &:hover {
+        border-color: $color-primary;
+        background-color: rgba($color-primary, 0.02);
+    }
+}
+
+// Checkout Navigation
+.checkout-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-lg;
+    background-color: $color-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+}
+
+// Checkout Summary
+.checkout-summary {
+    @include card;
+    padding: $spacing-lg;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+
+    &__title {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        margin-bottom: $spacing-lg;
+        padding-bottom: $spacing-md;
+        border-bottom: 1px solid $border-color;
+    }
+}
+
+.summary-totals {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    padding-top: $spacing-md;
+    margin-top: $spacing-md;
+    border-top: 1px solid $border-color;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size-sm;
+    color: $text-secondary;
+
+    &--total {
+        padding-top: $spacing-md;
+        margin-top: $spacing-sm;
+        border-top: 1px solid $border-color;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+
+        .total-price {
+            font-size: $font-size-xl;
+            color: $text-primary;
+        }
+    }
+}

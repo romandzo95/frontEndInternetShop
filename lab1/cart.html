@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link">Products</a>
+                    <a href="orders.html" class="nav__link">Orders</a>
+                </nav>
+
+                <div class="header__actions">
+                    <a href="login.html" class="btn btn--outline">Login</a>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Shopping Cart</h1>
+
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item">
+                        <a href="product-detail.html" class="cart-item__image">
+                            <img src="https://via.placeholder.com/120x120/2c3e50/ffffff?text=MacBook+Pro"
+                                alt="MacBook Pro">
+                        </a>
+                        <div class="cart-item__details">
+                            <a href="product-detail.html" class="cart-item__title">MacBook Pro 16" M3 Max</a>
+                            <span class="cart-item__category">Laptops</span>
+                            <span class="cart-item__config">Space Black / M3 Max / 36GB / 1TB</span>
+                        </div>
+                        <div class="cart-item__quantity">
+                            <div class="quantity-input">
+                                <button type="button" class="quantity-btn">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button type="button" class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item__price">
+                            <span class="price__current">$2,499</span>
+                        </div>
+                        <button class="cart-item__remove" aria-label="Remove item">×</button>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item">
+                        <a href="product-detail.html" class="cart-item__image">
+                            <img src="https://via.placeholder.com/120x120/2c3e50/ffffff?text=AirPods+Max"
+                                alt="AirPods Max">
+                        </a>
+                        <div class="cart-item__details">
+                            <a href="product-detail.html" class="cart-item__title">AirPods Max Silver</a>
+                            <span class="cart-item__category">Accessories</span>
+                            <span class="cart-item__config">Silver</span>
+                        </div>
+                        <div class="cart-item__quantity">
+                            <div class="quantity-input">
+                                <button type="button" class="quantity-btn">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button type="button" class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item__price">
+                            <span class="price__current">$549</span>
+                        </div>
+                        <button class="cart-item__remove" aria-label="Remove item">×</button>
+                    </div>
+
+                    <!-- Cart Item 3 -->
+                    <div class="cart-item">
+                        <a href="product-detail.html" class="cart-item__image">
+                            <img src="https://via.placeholder.com/120x120/2c3e50/ffffff?text=Apple+Watch"
+                                alt="Apple Watch">
+                        </a>
+                        <div class="cart-item__details">
+                            <a href="product-detail.html" class="cart-item__title">Apple Watch Ultra 2</a>
+                            <span class="cart-item__category">Accessories</span>
+                            <span class="cart-item__config">49mm Titanium Case</span>
+                        </div>
+                        <div class="cart-item__quantity">
+                            <div class="quantity-input">
+                                <button type="button" class="quantity-btn">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button type="button" class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item__price">
+                            <span class="price__current">$799</span>
+                        </div>
+                        <button class="cart-item__remove" aria-label="Remove item">×</button>
+                    </div>
+
+                    <!-- Continue Shopping -->
+                    <div class="cart-actions">
+                        <a href="products.html" class="btn btn--outline">← Continue Shopping</a>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="cart-summary">
+                    <h2 class="cart-summary__title">Order Summary</h2>
+
+                    <div class="cart-summary__row">
+                        <span>Subtotal (3 items)</span>
+                        <span>$3,847</span>
+                    </div>
+
+                    <div class="cart-summary__row">
+                        <span>Shipping</span>
+                        <span class="free-shipping">FREE</span>
+                    </div>
+
+                    <div class="cart-summary__row">
+                        <span>Tax (estimated)</span>
+                        <span>$307.76</span>
+                    </div>
+
+                    <div class="cart-summary__row cart-summary__row--total">
+                        <span>Total</span>
+                        <span>$4,154.76</span>
+                    </div>
+
+                    <a href="checkout.html" class="btn btn--primary btn--lg btn--block">Proceed to Checkout</a>
+
+                    <div class="cart-summary__features">
+                        <div class="summary-feature">
+                            <span class="feature-icon">🚚</span>
+                            <span>Free shipping on orders over $50</span>
+                        </div>
+                        <div class="summary-feature">
+                            <span class="feature-icon">🛡️</span>
+                            <span>Secure checkout</span>
+                        </div>
+                        <div class="summary-feature">
+                            <span class="feature-icon">↩️</span>
+                            <span>30-day returns</span>
+                        </div>
+                    </div>
+
+                    <!-- Promo Code -->
+                    <div class="promo-code">
+                        <h3 class="promo-code__title">Have a promo code?</h3>
+                        <form class="promo-code__form">
+                            <input type="text" class="input" placeholder="Enter promo code">
+                            <button type="submit" class="btn btn--outline">Apply</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommended Products -->
+            <section class="recommended">
+                <h2 class="section-title">You might also like</h2>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <a href="product-detail.html" class="product-card__link">
+                            <div class="product-card__image">
+                                <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=Magic+Mouse"
+                                    alt="Magic Mouse">
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Accessories</span>
+                                <h3 class="product-card__title">Magic Mouse</h3>
+                                <div class="product-card__price">
+                                    <span class="price__current">$99</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <a href="product-detail.html" class="product-card__link">
+                            <div class="product-card__image">
+                                <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=Magic+Keyboard"
+                                    alt="Magic Keyboard">
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Accessories</span>
+                                <h3 class="product-card__title">Magic Keyboard</h3>
+                                <div class="product-card__price">
+                                    <span class="price__current">$199</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <a href="product-detail.html" class="product-card__link">
+                            <div class="product-card__image">
+                                <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=USB-C+Hub"
+                                    alt="USB-C Hub">
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Accessories</span>
+                                <h3 class="product-card__title">USB-C Hub Pro</h3>
+                                <div class="product-card__price">
+                                    <span class="price__current">$79</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <a href="product-detail.html" class="product-card__link">
+                            <div class="product-card__image">
+                                <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=Laptop+Sleeve"
+                                    alt="Laptop Sleeve">
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Accessories</span>
+                                <h3 class="product-card__title">Premium Laptop Sleeve</h3>
+                                <div class="product-card__price">
+                                    <span class="price__current">$59</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

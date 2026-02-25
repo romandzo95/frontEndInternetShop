@@ -1,0 +1,198 @@
+// ===========================================
+// Base Styles
+// ===========================================
+
+// Reset
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-normal;
+    color: $text-primary;
+    background-color: $bg-secondary;
+    min-height: 100vh;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    color: $text-primary;
+}
+
+h1 {
+    font-size: $font-size-4xl;
+}
+
+h2 {
+    font-size: $font-size-3xl;
+}
+
+h3 {
+    font-size: $font-size-2xl;
+}
+
+h4 {
+    font-size: $font-size-xl;
+}
+
+h5 {
+    font-size: $font-size-lg;
+}
+
+h6 {
+    font-size: $font-size-base;
+}
+
+p {
+    margin-bottom: $spacing-md;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+        color: $color-primary-dark;
+    }
+}
+
+// Images
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Lists
+ul,
+ol {
+    list-style: none;
+}
+
+// Buttons
+button {
+    font-family: inherit;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+// Form Elements
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+// Tables
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+// Container
+.container {
+    @include container;
+}
+
+// Main Content
+.main-content {
+    padding: $spacing-2xl 0;
+    min-height: calc(100vh - 400px);
+}
+
+// Page Header
+.page-header {
+    margin-bottom: $spacing-xl;
+}
+
+.page-title {
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+}
+
+.page-subtitle {
+    font-size: $font-size-lg;
+    color: $text-secondary;
+}
+
+// Section Title
+.section-title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+}
+
+// Utility Classes
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-muted {
+    color: $text-muted;
+}
+
+.text-primary {
+    color: $color-primary;
+}
+
+.text-success {
+    color: $color-success;
+}
+
+.text-danger {
+    color: $color-danger;
+}
+
+.text-warning {
+    color: $color-warning;
+}
+
+.sr-only {
+    @include visually-hidden;
+}
+
+// Responsive utilities
+@include md {
+    .page-title {
+        font-size: $font-size-4xl;
+    }
+
+    .main-content {
+        padding: $spacing-3xl 0;
+    }
+}

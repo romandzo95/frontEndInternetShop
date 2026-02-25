@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro 16" M3 Max - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link nav__link--active">Products</a>
+                    <a href="orders.html" class="nav__link">Orders</a>
+                </nav>
+
+                <div class="header__actions">
+                    <a href="login.html" class="btn btn--outline">Login</a>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="products.html?category=laptops">Laptops</a></li>
+                <li class="active">MacBook Pro 16" M3 Max</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-detail">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="product-gallery__main">
+                        <img src="https://via.placeholder.com/600x600/2c3e50/ffffff?text=MacBook+Pro+16"
+                            alt="MacBook Pro 16">
+                        <span class="badge badge--sale">Save $300</span>
+                    </div>
+                    <div class="product-gallery__thumbs">
+                        <a href="#" class="product-gallery__thumb product-gallery__thumb--active">
+                            <img src="https://via.placeholder.com/100x100/2c3e50/ffffff?text=Front" alt="Front View">
+                        </a>
+                        <a href="#" class="product-gallery__thumb">
+                            <img src="https://via.placeholder.com/100x100/2c3e50/ffffff?text=Side" alt="Side View">
+                        </a>
+                        <a href="#" class="product-gallery__thumb">
+                            <img src="https://via.placeholder.com/100x100/2c3e50/ffffff?text=Back" alt="Back View">
+                        </a>
+                        <a href="#" class="product-gallery__thumb">
+                            <img src="https://via.placeholder.com/100x100/2c3e50/ffffff?text=Open" alt="Open View">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <span class="product-info__category">Laptops</span>
+                    <h1 class="product-info__title">MacBook Pro 16" M3 Max</h1>
+
+                    <div class="product-info__rating">
+                        <span class="stars">★★★★★</span>
+                        <a href="#reviews">(42 reviews)</a>
+                    </div>
+
+                    <div class="product-info__price">
+                        <span class="price__current">$2,499</span>
+                        <span class="price__old">$2,799</span>
+                        <span class="price__discount">Save $300 (11%)</span>
+                    </div>
+
+                    <p class="product-info__description">
+                        The most powerful MacBook Pro ever. With the M3 Max chip, up to 128GB of unified memory,
+                        and a stunning Liquid Retina XDR display, it's a beast for professionals.
+                    </p>
+
+                    <!-- Specifications -->
+                    <div class="product-specs">
+                        <h3 class="product-specs__title">Specifications</h3>
+                        <dl class="product-specs__list">
+                            <div class="spec-item">
+                                <dt>Processor</dt>
+                                <dd>Apple M3 Max</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Memory</dt>
+                                <dd>36GB Unified Memory</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Storage</dt>
+                                <dd>1TB SSD</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Display</dt>
+                                <dd>16.2" Liquid Retina XDR</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Battery</dt>
+                                <dd>Up to 22 hours</dd>
+                            </div>
+                            <div class="spec-item">
+                                <dt>Weight</dt>
+                                <dd>4.7 lbs (2.1 kg)</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="product-options">
+                        <h3 class="product-options__title">Color</h3>
+                        <div class="product-options__colors">
+                            <label class="color-option color-option--active">
+                                <input type="radio" name="color" checked>
+                                <span class="color-swatch" style="background: #2c3e50;"></span>
+                                <span class="color-label">Space Black</span>
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color">
+                                <span class="color-swatch" style="background: #b8b8b8;"></span>
+                                <span class="color-label">Silver</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Configuration Selection -->
+                    <div class="product-options">
+                        <h3 class="product-options__title">Configuration</h3>
+                        <div class="product-options__configs">
+                            <label class="config-option config-option--active">
+                                <input type="radio" name="config" checked>
+                                <div class="config-content">
+                                    <span class="config-name">M3 Max / 36GB / 1TB</span>
+                                    <span class="config-price">$2,499</span>
+                                </div>
+                            </label>
+                            <label class="config-option">
+                                <input type="radio" name="config">
+                                <div class="config-content">
+                                    <span class="config-name">M3 Max / 48GB / 1TB</span>
+                                    <span class="config-price">$2,799</span>
+                                </div>
+                            </label>
+                            <label class="config-option">
+                                <input type="radio" name="config">
+                                <div class="config-content">
+                                    <span class="config-name">M3 Max / 64GB / 2TB</span>
+                                    <span class="config-price">$3,499</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <form action="cart.html" class="product-actions">
+                        <div class="quantity-selector">
+                            <label class="product-actions__label">Quantity</label>
+                            <div class="quantity-input">
+                                <button type="button" class="quantity-btn">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button type="button" class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--lg btn--block">Add to Cart</button>
+                    </form>
+
+                    <!-- Stock Status -->
+                    <div class="product-stock">
+                        <span class="stock-status stock-status--in-stock">✓ In Stock</span>
+                        <span class="stock-info">Free shipping on orders over $50</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs">
+                    <button class="tab-btn tab-btn--active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="specifications">Specifications</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews (42)</button>
+                </div>
+
+                <div class="tab-content tab-content--active" id="description">
+                    <h3>Experience Unprecedented Power</h3>
+                    <p>The MacBook Pro 16" with M3 Max chip delivers extraordinary performance for the most demanding
+                        professional workflows. Whether you're editing 8K video, compiling code, or running complex
+                        simulations, the M3 Max handles it all with ease.</p>
+
+                    <h3>Stunning Liquid Retina XDR Display</h3>
+                    <p>The 16.2-inch Liquid Retina XDR display features Extreme Dynamic Range, over 1000 nits of
+                        brightness for HDR content, and ProMotion technology for up to 120Hz refresh rates.</p>
+
+                    <h3>All-Day Battery Life</h3>
+                    <p>Up to 22 hours of battery life means you can work all day and into the night without needing to
+                        plug in.</p>
+                </div>
+
+                <div class="tab-content" id="specifications">
+                    <table class="specs-table">
+                        <tr>
+                            <th>Chip</th>
+                            <td>Apple M3 Max</td>
+                        </tr>
+                        <tr>
+                            <th>CPU</th>
+                            <td>16-core (12 performance + 4 efficiency)</td>
+                        </tr>
+                        <tr>
+                            <th>GPU</th>
+                            <td>40-core</td>
+                        </tr>
+                        <tr>
+                            <th>Neural Engine</th>
+                            <td>16-core</td>
+                        </tr>
+                        <tr>
+                            <th>Memory Bandwidth</th>
+                            <td>400GB/s</td>
+                        </tr>
+                        <tr>
+                            <th>Unified Memory</th>
+                            <td>36GB</td>
+                        </tr>
+                        <tr>
+                            <th>Storage</th>
+                            <td>1TB SSD</td>
+                        </tr>
+                        <tr>
+                            <th>Display</th>
+                            <td>16.2" Liquid Retina XDR</td>
+                        </tr>
+                        <tr>
+                            <th>Resolution</th>
+                            <td>3456 x 2234 (254 ppi)</td>
+                        </tr>
+                        <tr>
+                            <th>Battery</th>
+                            <td>100Wh lithium-polymer</td>
+                        </tr>
+                        <tr>
+                            <th>Charging</th>
+                            <td>140W USB-C MagSafe 3</td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td>4.7 lbs (2.1 kg)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" id="reviews">
+                    <div class="reviews-summary">
+                        <div class="reviews-average">
+                            <span class="average-rating">4.9</span>
+                            <div class="average-stars">★★★★★</div>
+                            <span class="average-count">42 reviews</span>
+                        </div>
+                        <div class="reviews-bars">
+                            <div class="bar-row"><span>5 ★</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 85%;"></div>
+                                </div><span>36</span>
+                            </div>
+                            <div class="bar-row"><span>4 ★</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 10%;"></div>
+                                </div><span>4</span>
+                            </div>
+                            <div class="bar-row"><span>3 ★</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 5%;"></div>
+                                </div><span>2</span>
+                            </div>
+                            <div class="bar-row"><span>2 ★</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 0%;"></div>
+                                </div><span>0</span>
+                            </div>
+                            <div class="bar-row"><span>1 ★</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 0%;"></div>
+                                </div><span>0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reviews-list">
+                        <article class="review">
+                            <div class="review__header">
+                                <span class="review__author">John D.</span>
+                                <span class="review__date">January 15, 2024</span>
+                            </div>
+                            <div class="review__rating">★★★★★</div>
+                            <p class="review__text">Absolutely incredible machine. The M3 Max is a beast. I can edit 8K
+                                video without any lag. The display is stunning and the battery life is amazing.</p>
+                        </article>
+
+                        <article class="review">
+                            <div class="review__header">
+                                <span class="review__author">Sarah M.</span>
+                                <span class="review__date">January 10, 2024</span>
+                            </div>
+                            <div class="review__rating">★★★★★</div>
+                            <p class="review__text">Best laptop I've ever owned. The performance is unmatched and it's
+                                surprisingly portable for such a powerful machine.</p>
+                        </article>
+
+                        <article class="review">
+                            <div class="review__header">
+                                <span class="review__author">Mike R.</span>
+                                <span class="review__date">December 28, 2023</span>
+                            </div>
+                            <div class="review__rating">★★★★☆</div>
+                            <p class="review__text">Great laptop overall. The price is high but you get what you pay
+                                for. Only wish it had more port options.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <section class="related-products">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <a href="product-detail.html" class="product-card__link">
+                            <div class="product-card__image">
+                                <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=MacBook+Air"
+                                    alt="MacBook Air">
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Laptops</span>
+                                <h3 class="product-card__title">MacBook Air 15" M3</h3>
+                                <div class="product-card__rating">★★★★★ <span>(89)</span></div>
+                                <div class="product-card__price">
+                                    <span class="price__current">$1,299</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <a href="product-detail.html" class="product-card__link">
+                            <div class="product-card__image">
+                                <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=Dell+XPS+15"
+                                    alt="Dell XPS 15">
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Laptops</span>
+                                <h3 class="product-card__title">Dell XPS 15 Intel Core i9</h3>
+                                <div class="product-card__rating">★★★★☆ <span>(34)</span></div>
+                                <div class="product-card__price">
+                                    <span class="price__current">$1,799</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <a href="product-detail.html" class="product-card__link">
+                            <div class="product-card__image">
+                                <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=ThinkPad+X1"
+                                    alt="ThinkPad X1">
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Laptops</span>
+                                <h3 class="product-card__title">Lenovo ThinkPad X1 Carbon</h3>
+                                <div class="product-card__rating">★★★★☆ <span>(28)</span></div>
+                                <div class="product-card__price">
+                                    <span class="price__current">$1,649</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="product-card">
+                        <a href="product-detail.html" class="product-card__link">
+                            <div class="product-card__image">
+                                <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=Surface+Laptop"
+                                    alt="Surface Laptop">
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Laptops</span>
+                                <h3 class="product-card__title">Surface Laptop Studio 2</h3>
+                                <div class="product-card__rating">★★★★☆ <span>(19)</span></div>
+                                <div class="product-card__price">
+                                    <span class="price__current">$1,999</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

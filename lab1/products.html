@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link nav__link--active">Products</a>
+                    <a href="orders.html" class="nav__link">Orders</a>
+                </nav>
+
+                <div class="header__actions">
+                    <a href="login.html" class="btn btn--outline">Login</a>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">All Products</h1>
+                <p class="page-subtitle">Browse our collection of premium electronics</p>
+            </div>
+
+            <div class="products-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters">
+                    <div class="filters__section">
+                        <h3 class="filters__title">Categories</h3>
+                        <ul class="filters__list">
+                            <li><a href="products.html" class="filters__link filters__link--active">All Products
+                                    <span>(130)</span></a></li>
+                            <li><a href="products.html?category=laptops" class="filters__link">Laptops
+                                    <span>(24)</span></a></li>
+                            <li><a href="products.html?category=smartphones" class="filters__link">Smartphones
+                                    <span>(36)</span></a></li>
+                            <li><a href="products.html?category=tablets" class="filters__link">Tablets
+                                    <span>(18)</span></a></li>
+                            <li><a href="products.html?category=accessories" class="filters__link">Accessories
+                                    <span>(52)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3 class="filters__title">Price Range</h3>
+                        <div class="filters__price">
+                            <input type="number" placeholder="Min" class="input" value="0">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" class="input" value="5000">
+                        </div>
+                        <button class="btn btn--outline btn--block">Apply Filter</button>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3 class="filters__title">Brand</h3>
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span>Apple</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span>Samsung</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span>Dell</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span>Lenovo</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span>HP</span>
+                        </label>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3 class="filters__title">Rating</h3>
+                        <label class="radio">
+                            <input type="radio" name="rating">
+                            <span>★★★★★ & up</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="rating">
+                            <span>★★★★☆ & up</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="rating">
+                            <span>★★★☆☆ & up</span>
+                        </label>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <!-- Sort & View Options -->
+                    <div class="products-toolbar">
+                        <p class="products-count">Showing 24 of 130 products</p>
+                        <div class="products-sort">
+                            <label>Sort by:</label>
+                            <select class="select">
+                                <option>Newest First</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Best Rated</option>
+                                <option>Best Selling</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid">
+                        <!-- Product 1 -->
+                        <article class="product-card">
+                            <a href="product-detail.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=MacBook+Pro"
+                                        alt="MacBook Pro">
+                                    <span class="badge badge--sale">Sale</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <span class="product-card__category">Laptops</span>
+                                    <h3 class="product-card__title">MacBook Pro 16" M3 Max</h3>
+                                    <div class="product-card__rating">★★★★★ <span>(42)</span></div>
+                                    <div class="product-card__price">
+                                        <span class="price__current">$2,499</span>
+                                        <span class="price__old">$2,799</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form action="cart.html" method="get" class="product-card__actions">
+                                <button type="submit" class="btn btn--primary btn--block">Add to Cart</button>
+                            </form>
+                        </article>
+
+                        <!-- Product 2 -->
+                        <article class="product-card">
+                            <a href="product-detail.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=iPhone+15+Pro"
+                                        alt="iPhone 15 Pro">
+                                </div>
+                                <div class="product-card__content">
+                                    <span class="product-card__category">Smartphones</span>
+                                    <h3 class="product-card__title">iPhone 15 Pro Max 256GB</h3>
+                                    <div class="product-card__rating">★★★★☆ <span>(128)</span></div>
+                                    <div class="product-card__price">
+                                        <span class="price__current">$1,199</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form action="cart.html" method="get" class="product-card__actions">
+                                <button type="submit" class="btn btn--primary btn--block">Add to Cart</button>
+                            </form>
+                        </article>
+
+                        <!-- Product 3 -->
+                        <article class="product-card">
+                            <a href="product-detail.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=iPad+Pro"
+                                        alt="iPad Pro">
+                                    <span class="badge badge--new">New</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <span class="product-card__category">Tablets</span>
+                                    <h3 class="product-card__title">iPad Pro 12.9" M4</h3>
+                                    <div class="product-card__rating">★★★★★ <span>(56)</span></div>
+                                    <div class="product-card__price">
+                                        <span class="price__current">$999</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form action="cart.html" method="get" class="product-card__actions">
+                                <button type="submit" class="btn btn--primary btn--block">Add to Cart</button>
+                            </form>
+                        </article>
+
+                        <!-- Product 4 -->
+                        <article class="product-card">
+                            <a href="product-detail.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=AirPods+Max"
+                                        alt="AirPods Max">
+                                </div>
+                                <div class="product-card__content">
+                                    <span class="product-card__category">Accessories</span>
+                                    <h3 class="product-card__title">AirPods Max Silver</h3>
+                                    <div class="product-card__rating">★★★★☆ <span>(89)</span></div>
+                                    <div class="product-card__price">
+                                        <span class="price__current">$549</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form action="cart.html" method="get" class="product-card__actions">
+                                <button type="submit" class="btn btn--primary btn--block">Add to Cart</button>
+                            </form>
+                        </article>
+
+                        <!-- Product 5 -->
+                        <article class="product-card">
+                            <a href="product-detail.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=Dell+XPS+15"
+                                        alt="Dell XPS 15">
+                                </div>
+                                <div class="product-card__content">
+                                    <span class="product-card__category">Laptops</span>
+                                    <h3 class="product-card__title">Dell XPS 15 Intel Core i9</h3>
+                                    <div class="product-card__rating">★★★★☆ <span>(34)</span></div>
+                                    <div class="product-card__price">
+                                        <span class="price__current">$1,799</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form action="cart.html" method="get" class="product-card__actions">
+                                <button type="submit" class="btn btn--primary btn--block">Add to Cart</button>
+                            </form>
+                        </article>
+
+                        <!-- Product 6 -->
+                        <article class="product-card">
+                            <a href="product-detail.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=Galaxy+S24"
+                                        alt="Galaxy S24">
+                                    <span class="badge badge--sale">Sale</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <span class="product-card__category">Smartphones</span>
+                                    <h3 class="product-card__title">Samsung Galaxy S24 Ultra</h3>
+                                    <div class="product-card__rating">★★★★☆ <span>(67)</span></div>
+                                    <div class="product-card__price">
+                                        <span class="price__current">$1,299</span>
+                                        <span class="price__old">$1,399</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form action="cart.html" method="get" class="product-card__actions">
+                                <button type="submit" class="btn btn--primary btn--block">Add to Cart</button>
+                            </form>
+                        </article>
+
+                        <!-- Product 7 -->
+                        <article class="product-card">
+                            <a href="product-detail.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="https://via.placeholder.com/300x300/2c3e50/ffffff?text=Apple+Watch"
+                                        alt="Apple Watch">
+                                    <span class="badge badge--new">New</span>
+                                </div>
+                                <div class="product-card__content">
+                                    <span class="product-card__category">Accessories</span>
+                                    <h3 class="product-card__title">Apple Watch Ultra 2</h3>
+                                    <div class="product-card__rating">★★★★★ <span>(112)</span></div>
+                                    <div class="product-card__price">
+                                        <span class="price__current">$799</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form action="cart.html" method="get" class="product-card__actions">
+                                <button type="submit" class="btn btn--primary btn--block">Add to Cart</button>
+                            </form>
+                        </article>
+
+                        <!-- Product 8 -->
+                        <article class="product-card">
+                            <a href="product-detail.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="https://via.placeholder.com/300x300/2c3e500/ffffff?text=ThinkPad+X1"
+                                        alt="ThinkPad X1">
+                                </div>
+                                <div class="product-card__content">
+                                    <span class="product-card__category">Laptops</span>
+                                    <h3 class="product-card__title">Lenovo ThinkPad X1 Carbon</h3>
+                                    <div class="product-card__rating">★★★★☆ <span>(28)</span></div>
+                                    <div class="product-card__price">
+                                        <span class="price__current">$1,649</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form action="cart.html" method="get" class="product-card__actions">
+                                <button type="submit" class="btn btn--primary btn--block">Add to Cart</button>
+                            </form>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="pagination__link pagination__link--disabled">← Previous</a>
+                        <a href="#" class="pagination__link pagination__link--active">1</a>
+                        <a href="#" class="pagination__link">2</a>
+                        <a href="#" class="pagination__link">3</a>
+                        <span class="pagination__ellipsis">...</span>
+                        <a href="#" class="pagination__link">10</a>
+                        <a href="#" class="pagination__link">Next →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

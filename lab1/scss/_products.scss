@@ -1,0 +1,322 @@
+// ===========================================
+// Products
+// ===========================================
+
+// Products Grid
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-lg;
+
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include xl {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// Product Card
+.product-card {
+    @include card;
+    overflow: hidden;
+    transition: box-shadow $transition-fast, transform $transition-fast;
+
+    &:hover {
+        box-shadow: $shadow-lg;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__image {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        background-color: $color-gray-100;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform $transition-normal;
+        }
+
+        .product-card:hover & img {
+            transform: scale(1.05);
+        }
+    }
+
+    &__content {
+        padding: $spacing-md;
+    }
+
+    &__category {
+        display: block;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+        color: $text-muted;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: $spacing-xs;
+    }
+
+    &__title {
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: $spacing-sm;
+        @include text-clamp(2);
+    }
+
+    &__rating {
+        font-size: $font-size-sm;
+        color: $color-warning;
+        margin-bottom: $spacing-sm;
+
+        span {
+            color: $text-muted;
+            margin-left: $spacing-xs;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+    }
+
+    &__actions {
+        padding: 0 $spacing-md $spacing-md;
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+// Price
+.price {
+    &__current {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+    }
+
+    &__old {
+        font-size: $font-size-sm;
+        color: $text-muted;
+        text-decoration: line-through;
+    }
+
+    &__discount {
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        color: $color-danger;
+    }
+}
+
+// Badge
+.badge {
+    @include badge;
+
+    &--sale {
+        background-color: $color-danger;
+    }
+
+    &--new {
+        background-color: $color-success;
+    }
+
+    &--hot {
+        background-color: $color-warning;
+    }
+
+    &--out-of-stock {
+        background-color: $color-gray-600;
+    }
+}
+
+// Categories Grid
+.categories {
+    padding: $spacing-2xl 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-md;
+
+        @include sm {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+// Category Card
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-lg;
+    background-color: $color-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+    text-align: center;
+    text-decoration: none;
+    transition: all $transition-fast;
+
+    &:hover {
+        border-color: $color-primary;
+        box-shadow: $shadow-md;
+    }
+
+    &__icon {
+        font-size: $font-size-4xl;
+        margin-bottom: $spacing-md;
+    }
+
+    &__title {
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: $spacing-xs;
+    }
+
+    &__count {
+        font-size: $font-size-sm;
+        color: $text-muted;
+    }
+}
+
+// Products Toolbar
+.products-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+    padding: $spacing-md;
+    background-color: $color-white;
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+
+    @include sm {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.products-count {
+    font-size: $font-size-sm;
+    color: $text-secondary;
+}
+
+.products-sort {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    label {
+        font-size: $font-size-sm;
+        color: $text-secondary;
+    }
+
+    .select {
+        width: auto;
+        min-width: 180px;
+    }
+}
+
+// Products Layout
+.products-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+
+    @include lg {
+        grid-template-columns: 280px 1fr;
+    }
+}
+
+// Filters Sidebar
+.filters {
+    @include card;
+    padding: $spacing-lg;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+
+    &__section {
+        padding-bottom: $spacing-lg;
+        margin-bottom: $spacing-lg;
+        border-bottom: 1px solid $border-color;
+
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    &__title {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: $spacing-md;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        padding: $spacing-sm;
+        font-size: $font-size-sm;
+        color: $text-secondary;
+        border-radius: $radius-md;
+        transition: all $transition-fast;
+
+        &:hover {
+            background-color: $color-gray-100;
+            color: $text-primary;
+        }
+
+        &--active {
+            background-color: rgba($color-primary, 0.1);
+            color: $color-primary;
+            font-weight: $font-weight-medium;
+        }
+
+        span {
+            color: $text-muted;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        margin-bottom: $spacing-md;
+
+        .input {
+            width: 80px;
+            text-align: center;
+        }
+
+        span {
+            color: $text-muted;
+        }
+    }
+}

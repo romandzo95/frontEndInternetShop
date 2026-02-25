@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link">Products</a>
+                    <a href="orders.html" class="nav__link">Orders</a>
+                </nav>
+
+                <div class="header__actions">
+                    <div class="user-menu">
+                        <button class="user-menu__trigger">
+                            <span class="user-avatar">JD</span>
+                            <span class="user-name">John Doe</span>
+                        </button>
+                        <div class="user-menu__dropdown">
+                            <a href="profile.html" class="user-menu__link user-menu__link--active">My Profile</a>
+                            <a href="orders.html" class="user-menu__link">My Orders</a>
+                            <a href="cart.html" class="user-menu__link">Shopping Cart</a>
+                            <hr class="user-menu__divider">
+                            <a href="index.html" class="user-menu__link">Logout</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">My Profile</h1>
+
+            <div class="profile-layout">
+                <!-- Sidebar -->
+                <aside class="profile-sidebar">
+                    <div class="profile-user">
+                        <div class="profile-avatar">JD</div>
+                        <div class="profile-info">
+                            <h2 class="profile-name">John Doe</h2>
+                            <p class="profile-email">john.doe@example.com</p>
+                        </div>
+                    </div>
+
+                    <nav class="profile-nav">
+                        <a href="profile.html" class="profile-nav__link profile-nav__link--active">
+                            <span class="nav-icon">👤</span>
+                            Personal Information
+                        </a>
+                        <a href="orders.html" class="profile-nav__link">
+                            <span class="nav-icon">📦</span>
+                            My Orders
+                        </a>
+                        <a href="#" class="profile-nav__link">
+                            <span class="nav-icon">📍</span>
+                            Addresses
+                        </a>
+                        <a href="#" class="profile-nav__link">
+                            <span class="nav-icon">💳</span>
+                            Payment Methods
+                        </a>
+                        <a href="#" class="profile-nav__link">
+                            <span class="nav-icon">🔔</span>
+                            Notifications
+                        </a>
+                        <a href="#" class="profile-nav__link">
+                            <span class="nav-icon">🔒</span>
+                            Security
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Profile Content -->
+                <div class="profile-main">
+                    <!-- Personal Information -->
+                    <section class="profile-section">
+                        <div class="profile-section__header">
+                            <h2 class="profile-section__title">Personal Information</h2>
+                            <button class="btn btn--outline btn--sm">Edit</button>
+                        </div>
+
+                        <div class="profile-grid">
+                            <div class="profile-field">
+                                <span class="profile-field__label">First Name</span>
+                                <span class="profile-field__value">John</span>
+                            </div>
+                            <div class="profile-field">
+                                <span class="profile-field__label">Last Name</span>
+                                <span class="profile-field__value">Doe</span>
+                            </div>
+                            <div class="profile-field">
+                                <span class="profile-field__label">Email Address</span>
+                                <span class="profile-field__value">john.doe@example.com</span>
+                            </div>
+                            <div class="profile-field">
+                                <span class="profile-field__label">Phone Number</span>
+                                <span class="profile-field__value">+1 (555) 123-4567</span>
+                            </div>
+                            <div class="profile-field">
+                                <span class="profile-field__label">Date of Birth</span>
+                                <span class="profile-field__value">January 15, 1990</span>
+                            </div>
+                            <div class="profile-field">
+                                <span class="profile-field__label">Gender</span>
+                                <span class="profile-field__value">Male</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Default Address -->
+                    <section class="profile-section">
+                        <div class="profile-section__header">
+                            <h2 class="profile-section__title">Default Address</h2>
+                            <button class="btn btn--outline btn--sm">Edit</button>
+                        </div>
+
+                        <div class="address-card address-card--default">
+                            <div class="address-card__badge">Default</div>
+                            <p class="address-card__text">
+                                John Doe<br>
+                                123 Main Street<br>
+                                Apt 4B<br>
+                                New York, NY 10001<br>
+                                United States<br>
+                                +1 (555) 123-4567
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Additional Addresses -->
+                    <section class="profile-section">
+                        <div class="profile-section__header">
+                            <h2 class="profile-section__title">Additional Addresses</h2>
+                            <button class="btn btn--outline btn--sm">Add New</button>
+                        </div>
+
+                        <div class="address-cards">
+                            <div class="address-card">
+                                <div class="address-card__badge">Work</div>
+                                <p class="address-card__text">
+                                    John Doe<br>
+                                    456 Business Ave<br>
+                                    Suite 100<br>
+                                    New York, NY 10002<br>
+                                    United States<br>
+                                    +1 (555) 987-6543
+                                </p>
+                                <div class="address-card__actions">
+                                    <button class="btn-link">Edit</button>
+                                    <button class="btn-link btn-link--danger">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Account Security -->
+                    <section class="profile-section">
+                        <div class="profile-section__header">
+                            <h2 class="profile-section__title">Account Security</h2>
+                        </div>
+
+                        <div class="security-options">
+                            <div class="security-option">
+                                <div class="security-option__info">
+                                    <h3 class="security-option__title">Password</h3>
+                                    <p class="security-option__text">Last changed 3 months ago</p>
+                                </div>
+                                <button class="btn btn--outline btn--sm">Change</button>
+                            </div>
+
+                            <div class="security-option">
+                                <div class="security-option__info">
+                                    <h3 class="security-option__title">Two-Factor Authentication</h3>
+                                    <p class="security-option__text">Add an extra layer of security to your account</p>
+                                </div>
+                                <button class="btn btn--outline btn--sm">Enable</button>
+                            </div>
+
+                            <div class="security-option">
+                                <div class="security-option__info">
+                                    <h3 class="security-option__title">Connected Accounts</h3>
+                                    <p class="security-option__text">Google, Apple</p>
+                                </div>
+                                <button class="btn btn--outline btn--sm">Manage</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Newsletter Preferences -->
+                    <section class="profile-section">
+                        <div class="profile-section__header">
+                            <h2 class="profile-section__title">Newsletter Preferences</h2>
+                        </div>
+
+                        <div class="newsletter-options">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>Product updates and new arrivals</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>Exclusive deals and promotions</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Weekly newsletter digest</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Market research surveys</span>
+                            </label>
+                        </div>
+                        <button class="btn btn--primary">Save Preferences</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

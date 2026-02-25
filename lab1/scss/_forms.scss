@@ -1,0 +1,227 @@
+// ===========================================
+// Forms
+// ===========================================
+
+// Form Group
+.form-group {
+    margin-bottom: $spacing-md;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Form Row
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// Labels
+.label {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+}
+
+// Input
+.input {
+    @include input-base;
+}
+
+.input-hint {
+    display: block;
+    font-size: $font-size-xs;
+    color: $text-muted;
+    margin-top: $spacing-xs;
+}
+
+// Select
+.select {
+    @include input-base;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right $spacing-sm center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-right: $spacing-2xl;
+}
+
+// Textarea
+.textarea {
+    @include input-base;
+    min-height: 120px;
+    resize: vertical;
+}
+
+// Checkbox
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-sm;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-top: 2px;
+        accent-color: $color-primary;
+        cursor: pointer;
+    }
+
+    span {
+        font-size: $font-size-sm;
+        color: $text-secondary;
+        line-height: $line-height-normal;
+
+        a {
+            color: $color-primary;
+            text-decoration: underline;
+
+            &:hover {
+                color: $color-primary-dark;
+            }
+        }
+    }
+
+    &:hover span {
+        color: $text-primary;
+    }
+}
+
+// Radio
+.radio {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    cursor: pointer;
+    padding: $spacing-sm 0;
+
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        accent-color: $color-primary;
+        cursor: pointer;
+    }
+
+    span {
+        font-size: $font-size-sm;
+        color: $text-secondary;
+    }
+
+    &:hover span {
+        color: $text-primary;
+    }
+}
+
+// Quantity Input
+.quantity-input {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    overflow: hidden;
+
+    .quantity-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        font-size: $font-size-lg;
+        color: $text-secondary;
+        background-color: $color-gray-50;
+        border: none;
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        &:hover {
+            background-color: $color-gray-100;
+            color: $text-primary;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    input[type="number"] {
+        width: 50px;
+        height: 36px;
+        padding: 0;
+        text-align: center;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+        color: $text-primary;
+        border: none;
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+// Form Validation
+.form-group {
+    &.has-error {
+
+        .input,
+        .select,
+        .textarea {
+            border-color: $color-danger;
+
+            &:focus {
+                box-shadow: 0 0 0 3px rgba($color-danger, 0.1);
+            }
+        }
+    }
+
+    &.has-success {
+
+        .input,
+        .select,
+        .textarea {
+            border-color: $color-success;
+
+            &:focus {
+                box-shadow: 0 0 0 3px rgba($color-success, 0.1);
+            }
+        }
+    }
+}
+
+.error-message {
+    display: block;
+    font-size: $font-size-xs;
+    color: $color-danger;
+    margin-top: $spacing-xs;
+}
+
+// Forgot Password Link
+.forgot-link {
+    display: inline-block;
+    font-size: $font-size-sm;
+    color: $color-primary;
+    margin-top: $spacing-xs;
+
+    &:hover {
+        color: $color-primary-dark;
+        text-decoration: underline;
+    }
+}

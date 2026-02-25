@@ -1,0 +1,26 @@
+// ===========================================
+// Main SCSS File
+// ShopTech E-commerce Template
+// ===========================================
+
+// 1. Variables (must be first)
+@import 'variables';
+
+// 2. Mixins
+@import 'mixins';
+
+// 3. Base styles
+@import 'base';
+
+// 4. Components
+@import 'header';
+@import 'footer';
+@import 'buttons';
+@import 'forms';
+@import 'products';
+@import 'cart';
+@import 'checkout';
+@import 'product-detail';
+
+// 5. Page-specific styles
+@import 'pages';

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link">Products</a>
+                    <a href="orders.html" class="nav__link">Orders</a>
+                </nav>
+
+                <div class="header__actions">
+                    <a href="login.html" class="btn btn--outline">Login</a>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Checkout</h1>
+
+            <!-- Checkout Steps -->
+            <div class="checkout-steps">
+                <div class="step step--completed">
+                    <span class="step__number">✓</span>
+                    <span class="step__label">Cart</span>
+                </div>
+                <div class="step step--active">
+                    <span class="step__number">2</span>
+                    <span class="step__label">Information</span>
+                </div>
+                <div class="step">
+                    <span class="step__number">3</span>
+                    <span class="step__label">Payment</span>
+                </div>
+                <div class="step">
+                    <span class="step__number">4</span>
+                    <span class="step__label">Confirmation</span>
+                </div>
+            </div>
+
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <!-- Contact Information -->
+                    <section class="checkout-section">
+                        <h2 class="checkout-section__title">Contact Information</h2>
+                        <div class="form-group">
+                            <label class="label" for="email">Email Address</label>
+                            <input type="email" id="email" class="input" placeholder="your@email.com"
+                                value="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>Keep me updated with news and offers</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- Shipping Address -->
+                    <section class="checkout-section">
+                        <h2 class="checkout-section__title">Shipping Address</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="label" for="firstName">First Name</label>
+                                <input type="text" id="firstName" class="input" value="John">
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="lastName">Last Name</label>
+                                <input type="text" id="lastName" class="input" value="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="address">Address</label>
+                            <input type="text" id="address" class="input" value="123 Main Street">
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="apartment">Apartment, suite, etc. (optional)</label>
+                            <input type="text" id="apartment" class="input" value="Apt 4B">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="label" for="city">City</label>
+                                <input type="text" id="city" class="input" value="New York">
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="state">State</label>
+                                <select id="state" class="select">
+                                    <option value="">Select State</option>
+                                    <option value="NY" selected>New York</option>
+                                    <option value="CA">California</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="FL">Florida</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="zipCode">ZIP Code</label>
+                                <input type="text" id="zipCode" class="input" value="10001">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="input" value="+1 (555) 123-4567">
+                        </div>
+                    </section>
+
+                    <!-- Shipping Method -->
+                    <section class="checkout-section">
+                        <h2 class="checkout-section__title">Shipping Method</h2>
+                        <div class="shipping-options">
+                            <label class="shipping-option shipping-option--selected">
+                                <input type="radio" name="shipping" checked>
+                                <div class="shipping-option__content">
+                                    <span class="shipping-option__name">Standard Shipping</span>
+                                    <span class="shipping-option__time">5-7 business days</span>
+                                </div>
+                                <span class="shipping-option__price">FREE</span>
+                            </label>
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping">
+                                <div class="shipping-option__content">
+                                    <span class="shipping-option__name">Express Shipping</span>
+                                    <span class="shipping-option__time">2-3 business days</span>
+                                </div>
+                                <span class="shipping-option__price">$14.99</span>
+                            </label>
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping">
+                                <div class="shipping-option__content">
+                                    <span class="shipping-option__name">Next Day Delivery</span>
+                                    <span class="shipping-option__time">Tomorrow</span>
+                                </div>
+                                <span class="shipping-option__price">$29.99</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- Navigation -->
+                    <div class="checkout-nav">
+                        <a href="cart.html" class="btn btn--outline">← Return to Cart</a>
+                        <a href="#" class="btn btn--primary">Continue to Payment</a>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="checkout-summary">
+                    <h2 class="checkout-summary__title">Order Summary</h2>
+
+                    <!-- Items -->
+                    <div class="summary-items">
+                        <div class="summary-item">
+                            <div class="summary-item__image">
+                                <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=MacBook"
+                                    alt="MacBook Pro">
+                                <span class="summary-item__qty">1</span>
+                            </div>
+                            <div class="summary-item__details">
+                                <span class="summary-item__title">MacBook Pro 16" M3 Max</span>
+                                <span class="summary-item__config">Space Black</span>
+                            </div>
+                            <span class="summary-item__price">$2,499</span>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item__image">
+                                <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=AirPods"
+                                    alt="AirPods Max">
+                                <span class="summary-item__qty">1</span>
+                            </div>
+                            <div class="summary-item__details">
+                                <span class="summary-item__title">AirPods Max Silver</span>
+                                <span class="summary-item__config">Silver</span>
+                            </div>
+                            <span class="summary-item__price">$549</span>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item__image">
+                                <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=Watch" alt="Apple Watch">
+                                <span class="summary-item__qty">1</span>
+                            </div>
+                            <div class="summary-item__details">
+                                <span class="summary-item__title">Apple Watch Ultra 2</span>
+                                <span class="summary-item__config">49mm Titanium</span>
+                            </div>
+                            <span class="summary-item__price">$799</span>
+                        </div>
+                    </div>
+
+                    <!-- Totals -->
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>$3,847</span>
+                            <div class="summary</div>
+                        -row">
+                                <span>Shipping</span>
+                                <span>FREE</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax</span>
+                                <span>$307.76</span>
+                            </div>
+                            <div class="summary-row summary-row--total">
+                                <span>Total</span>
+                                <span class="total-price">$4,154.76</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

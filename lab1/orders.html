@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link">Products</a>
+                    <a href="orders.html" class="nav__link nav__link--active">Orders</a>
+                </nav>
+
+                <div class="header__actions">
+                    <div class="user-menu">
+                        <button class="user-menu__trigger">
+                            <span class="user-avatar">JD</span>
+                            <span class="user-name">John Doe</span>
+                        </button>
+                        <div class="user-menu__dropdown">
+                            <a href="profile.html" class="user-menu__link">My Profile</a>
+                            <a href="orders.html" class="user-menu__link user-menu__link--active">My Orders</a>
+                            <a href="cart.html" class="user-menu__link">Shopping Cart</a>
+                            <hr class="user-menu__divider">
+                            <a href="index.html" class="user-menu__link">Logout</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Order History</h1>
+
+            <!-- Order Filters -->
+            <div class="orders-filters">
+                <div class="orders-search">
+                    <input type="text" class="input" placeholder="Search orders...">
+                </div>
+                <div class="orders-filter">
+                    <select class="select">
+                        <option value="">All Status</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </div>
+                <div class="orders-filter">
+                    <select class="select">
+                        <option value="">All Time</option>
+                        <option value="30">Last 30 Days</option>
+                        <option value="90">Last 90 Days</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Orders List -->
+            <div class="orders-list">
+                <!-- Order 1 -->
+                <article class="order-card">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <span class="order-id">Order #ORD-2024-00142</span>
+                            <span class="order-date">January 15, 2024</span>
+                        </div>
+                        <div class="order-status order-status--delivered">Delivered</div>
+                    </div>
+
+                    <div class="order-items">
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=MacBook" alt="MacBook Pro">
+                            <div class="order-item__details">
+                                <a href="product-detail.html" class="order-item__title">MacBook Pro 16" M3 Max</a>
+                                <span class="order-item__config">Space Black / M3 Max / 36GB / 1TB</span>
+                            </div>
+                            <span class="order-item__price">$2,499</span>
+                            <span class="order-item__qty">x1</span>
+                        </div>
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=AirPods" alt="AirPods Max">
+                            <div class="order-item__details">
+                                <a href="product-detail.html" class="order-item__title">AirPods Max Silver</a>
+                                <span class="order-item__config">Silver</span>
+                            </div>
+                            <span class="order-item__price">$549</span>
+                            <span class="order-item__qty">x1</span>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="order-total__label">Total</span>
+                            <span class="order-total__value">$3,048</span>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn--outline btn--sm">View Details</button>
+                            <button class="btn btn--outline btn--sm">Buy Again</button>
+                        </div>
+                    </div>
+
+                    <div class="order-timeline">
+                        <div class="timeline-item timeline-item--completed">
+                            <span class="timeline-icon">✓</span>
+                            <span class="timeline-text">Order Placed</span>
+                            <span class="timeline-date">Jan 15</span>
+                        </div>
+                        <div class="timeline-item timeline-item--completed">
+                            <span class="timeline-icon">✓</span>
+                            <span class="timeline-text">Processing</span>
+                            <span class="timeline-date">Jan 15</span>
+                        </div>
+                        <div class="timeline-item timeline-item--completed">
+                            <span class="timeline-icon">✓</span>
+                            <span class="timeline-text">Shipped</span>
+                            <span class="timeline-date">Jan 17</span>
+                        </div>
+                        <div class="timeline-item timeline-item--completed">
+                            <span class="timeline-icon">✓</span>
+                            <span class="timeline-text">Delivered</span>
+                            <span class="timeline-date">Jan 20</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Order 2 -->
+                <article class="order-card">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <span class="order-id">Order #ORD-2024-00098</span>
+                            <span class="order-date">December 28, 2023</span>
+                        </div>
+                        <div class="order-status order-status--delivered">Delivered</div>
+                    </div>
+
+                    <div class="order-items">
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=Watch" alt="Apple Watch">
+                            <div class="order-item__details">
+                                <a href="product-detail.html" class="order-item__title">Apple Watch Ultra 2</a>
+                                <span class="order-item__config">49mm Titanium Case</span>
+                            </div>
+                            <span class="order-item__price">$799</span>
+                            <span class="order-item__qty">x1</span>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="order-total__label">Total</span>
+                            <span class="order-total__value">$799</span>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn--outline btn--sm">View Details</button>
+                            <button class="btn btn--outline btn--sm">Buy Again</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Order 3 -->
+                <article class="order-card">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <span class="order-id">Order #ORD-2024-00056</span>
+                            <span class="order-date">January 20, 2024</span>
+                        </div>
+                        <div class="order-status order-status--shipped">Shipped</div>
+                    </div>
+
+                    <div class="order-items">
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=iPad" alt="iPad Pro">
+                            <div class="order-item__details">
+                                <a href="product-detail.html" class="order-item__title">iPad Pro 12.9" M4</a>
+                                <span class="order-item__config">Space Gray / 256GB</span>
+                            </div>
+                            <span class="order-item__price">$999</span>
+                            <span class="order-item__qty">x1</span>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="order-total__label">Total</span>
+                            <span class="order-total__value">$999</span>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn--outline btn--sm">Track Package</button>
+                            <button class="btn btn--outline btn--sm">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="order-timeline">
+                        <div class="timeline-item timeline-item--completed">
+                            <span class="timeline-icon">✓</span>
+                            <span class="timeline-text">Order Placed</span>
+                            <span class="timeline-date">Jan 20</span>
+                        </div>
+                        <div class="timeline-item timeline-item--completed">
+                            <span class="timeline-icon">✓</span>
+                            <span class="timeline-text">Processing</span>
+                            <span class="timeline-date">Jan 20</span>
+                        </div>
+                        <div class="timeline-item timeline-item--completed">
+                            <span class="timeline-icon">✓</span>
+                            <span class="timeline-text">Shipped</span>
+                            <span class="timeline-date">Jan 22</span>
+                        </div>
+                        <div class="timeline-item timeline-item--current">
+                            <span class="timeline-icon">●</span>
+                            <span class="timeline-text">Out for Delivery</span>
+                            <span class="timeline-date">Expected Jan 24</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Order 4 -->
+                <article class="order-card">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <span class="order-id">Order #ORD-2024-00178</span>
+                            <span class="order-date">January 22, 2024</span>
+                        </div>
+                        <div class="order-status order-status--processing">Processing</div>
+                    </div>
+
+                    <div class="order-items">
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=iPhone" alt="iPhone 15">
+                            <div class="order-item__details">
+                                <a href="product-detail.html" class="order-item__title">iPhone 15 Pro Max 256GB</a>
+                                <span class="order-item__config">Natural Titanium</span>
+                            </div>
+                            <span class="order-item__price">$1,199</span>
+                            <span class="order-item__qty">x1</span>
+                        </div>
+                        <div class="order-item">
+                            <img src="https://via.placeholder.com/80x80/2c3e50/ffffff?text=Case" alt="Phone Case">
+                            <div class="order-item__details">
+                                <a href="product-detail.html" class="order-item__title">Premium Leather Case</a>
+                                <span class="order-item__config">Black</span>
+                            </div>
+                            <span class="order-item__price">$59</span>
+                            <span class="order-item__qty">x1</span>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <span class="order-total__label">Total</span>
+                            <span class="order-total__value">$1,258</span>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn--outline btn--sm">View Details</button>
+                            <button class="btn btn--outline btn--sm">Cancel Order</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="pagination__link pagination__link--disabled">← Previous</a>
+                <a href="#" class="pagination__link pagination__link--active">1</a>
+                <a href="#" class="pagination__link">2</a>
+                <a href="#" class="pagination__link">3</a>
+                <a href="#" class="pagination__link">Next →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link">Products</a>
+                    <a href="orders.html" class="nav__link">Orders</a>
+                </nav>
+
+                <div class="header__actions">
+                    <a href="login.html" class="btn btn--outline">Login</a>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <h1 class="auth-title">Create Account</h1>
+                    <p class="auth-subtitle">Join ShopTech and start shopping</p>
+
+                    <form class="auth-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="label" for="firstName">First Name</label>
+                                <input type="text" id="firstName" class="input" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="lastName">Last Name</label>
+                                <input type="text" id="lastName" class="input" placeholder="Doe" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label" for="email">Email Address</label>
+                            <input type="email" id="email" class="input" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="input" placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label" for="password">Password</label>
+                            <input type="password" id="password" class="input" placeholder="Create a password" required>
+                            <span class="input-hint">Must be at least 8 characters</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label" for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" class="input"
+                                placeholder="Confirm your password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" required>
+                                <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                        Policy</a></span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Subscribe to newsletter for exclusive deals</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--lg btn--block">Create Account</button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <div class="social-auth">
+                        <button type="button" class="btn btn--social btn--google">
+                            <span class="social-icon">G</span>
+                            Google
+                        </button>
+                        <button type="button" class="btn btn--social btn--apple">
+                            <span class="social-icon"></span>
+                            Apple
+                        </button>
+                    </div>
+
+                    <p class="auth-footer">
+                        Already have an account? <a href="login.html">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
