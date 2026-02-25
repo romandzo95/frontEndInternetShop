@@ -75,21 +75,22 @@
                             <span class="nav-icon">📦</span>
                             My Orders
                         </a>
-                        <a href="#" class="profile-nav__link">
+                        <a href="#addresses" class="profile-nav__link">
                             <span class="nav-icon">📍</span>
                             Addresses
                         </a>
-                        <a href="#" class="profile-nav__link">
+                        <a href="#payments" class="profile-nav__link">
                             <span class="nav-icon">💳</span>
                             Payment Methods
                         </a>
-                        <a href="#" class="profile-nav__link">
-                            <span class="nav-icon">🔔</span>
-                            Notifications
-                        </a>
-                        <a href="#" class="profile-nav__link">
+                        <a href="#security" class="profile-nav__link">
                             <span class="nav-icon">🔒</span>
                             Security
+                        </a>
+                        <hr class="profile-nav__divider">
+                        <a href="index.html" class="profile-nav__link">
+                            <span class="nav-icon">🚪</span>
+                            Logout
                         </a>
                     </nav>
                 </aside>
@@ -100,77 +101,226 @@
                     <section class="profile-section">
                         <div class="profile-section__header">
                             <h2 class="profile-section__title">Personal Information</h2>
-                            <button class="btn btn--outline btn--sm">Edit</button>
+                            <div class="profile-actions">
+                                <button class="btn btn--outline btn--sm" type="button">Cancel</button>
+                                <button class="btn btn--primary btn--sm" type="button">Save</button>
+                            </div>
                         </div>
 
-                        <div class="profile-grid">
-                            <div class="profile-field">
-                                <span class="profile-field__label">First Name</span>
-                                <span class="profile-field__value">John</span>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label class="label" for="firstName">First Name</label>
+                                <input class="input" id="firstName" type="text" value="John" required>
                             </div>
-                            <div class="profile-field">
-                                <span class="profile-field__label">Last Name</span>
-                                <span class="profile-field__value">Doe</span>
+
+                            <div class="form-group">
+                                <label class="label" for="lastName">Last Name</label>
+                                <input class="input" id="lastName" type="text" value="Doe" required>
                             </div>
-                            <div class="profile-field">
-                                <span class="profile-field__label">Email Address</span>
-                                <span class="profile-field__value">john.doe@example.com</span>
+
+                            <div class="form-group">
+                                <label class="label" for="email">Email Address</label>
+                                <input class="input" id="email" type="email" value="john.doe@example.com" required>
+                                <p class="form-error">Please enter a valid email.</p>
                             </div>
-                            <div class="profile-field">
-                                <span class="profile-field__label">Phone Number</span>
-                                <span class="profile-field__value">+1 (555) 123-4567</span>
+
+                            <div class="form-group">
+                                <label class="label" for="phone">Phone Number</label>
+                                <input class="input" id="phone" type="tel" value="+1 (555) 123-4567">
                             </div>
-                            <div class="profile-field">
-                                <span class="profile-field__label">Date of Birth</span>
-                                <span class="profile-field__value">January 15, 1990</span>
+
+                            <div class="form-group">
+                                <label class="label" for="dob">Date of Birth</label>
+                                <input class="input" id="dob" type="date" value="1990-01-15">
                             </div>
-                            <div class="profile-field">
-                                <span class="profile-field__label">Gender</span>
-                                <span class="profile-field__value">Male</span>
+
+                            <div class="form-group">
+                                <label class="label" for="gender">Gender</label>
+                                <select class="select" id="gender">
+                                    <option value="male" selected>Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not">Prefer not to say</option>
+                                </select>
                             </div>
-                        </div>
+                        </form>
                     </section>
 
                     <!-- Default Address -->
-                    <section class="profile-section">
+                    <section class="profile-section" id="addresses">
                         <div class="profile-section__header">
                             <h2 class="profile-section__title">Default Address</h2>
-                            <button class="btn btn--outline btn--sm">Edit</button>
+                            <div class="profile-actions">
+                                <button class="btn btn--outline btn--sm" type="button">Cancel</button>
+                                <button class="btn btn--primary btn--sm" type="button">Save</button>
+                            </div>
                         </div>
 
-                        <div class="address-card address-card--default">
-                            <div class="address-card__badge">Default</div>
-                            <p class="address-card__text">
-                                John Doe<br>
-                                123 Main Street<br>
-                                Apt 4B<br>
-                                New York, NY 10001<br>
-                                United States<br>
-                                +1 (555) 123-4567
-                            </p>
-                        </div>
+                        <form class="profile-form profile-form--two-cols">
+                            <div class="form-group">
+                                <label class="label" for="addressName">Full Name</label>
+                                <input class="input" id="addressName" type="text" value="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="addressPhone">Phone</label>
+                                <input class="input" id="addressPhone" type="tel" value="+1 (555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="addressLine1">Address Line 1</label>
+                                <input class="input" id="addressLine1" type="text" value="123 Main Street" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="addressLine2">Address Line 2</label>
+                                <input class="input" id="addressLine2" type="text" value="Apt 4B">
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="city">City</label>
+                                <input class="input" id="city" type="text" value="New York" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="state">State/Province</label>
+                                <input class="input" id="state" type="text" value="NY" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="zip">ZIP/Postal Code</label>
+                                <input class="input" id="zip" type="text" value="10001" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label" for="country">Country</label>
+                                <input class="input" id="country" type="text" value="United States" required>
+                            </div>
+                        </form>
                     </section>
 
                     <!-- Additional Addresses -->
                     <section class="profile-section">
                         <div class="profile-section__header">
                             <h2 class="profile-section__title">Additional Addresses</h2>
-                            <button class="btn btn--outline btn--sm">Add New</button>
+                            <button class="btn btn--outline btn--sm" type="button">Add New</button>
                         </div>
 
                         <div class="address-cards">
                             <div class="address-card">
                                 <div class="address-card__badge">Work</div>
-                                <p class="address-card__text">
-                                    John Doe<br>
-                                    456 Business Ave<br>
-                                    Suite 100<br>
-                                    New York, NY 10002<br>
-                                    United States<br>
-                                    +1 (555) 987-6543
-                                </p>
+                                <form class="profile-form profile-form--two-cols">
+                                    <div class="form-group">
+                                        <label class="label" for="workName">Full Name</label>
+                                        <input class="input" id="workName" type="text" value="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="workPhone">Phone</label>
+                                        <input class="input" id="workPhone" type="tel" value="+1 (555) 987-6543">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="workLine1">Address Line 1</label>
+                                        <input class="input" id="workLine1" type="text" value="456 Business Ave">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="workLine2">Address Line 2</label>
+                                        <input class="input" id="workLine2" type="text" value="Suite 100">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="workCity">City</label>
+                                        <input class="input" id="workCity" type="text" value="New York">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="workState">State/Province</label>
+                                        <input class="input" id="workState" type="text" value="NY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="workZip">ZIP/Postal Code</label>
+                                        <input class="input" id="workZip" type="text" value="10002">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="workCountry">Country</label>
+                                        <input class="input" id="workCountry" type="text" value="United States">
+                                    </div>
+                                </form>
                                 <div class="address-card__actions">
-                                    <button class="btn-link">Edit</button>
+                                    <button class="btn-link">Save</button>
+                                    <button class="btn-link btn-link--danger">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Payment Methods -->
+                    <section class="profile-section" id="payments">
+                        <div class="profile-section__header">
+                            <h2 class="profile-section__title">Payment Methods</h2>
+                            <div class="profile-actions">
+                                <button class="btn btn--outline btn--sm" type="button">Cancel</button>
+                                <button class="btn btn--primary btn--sm" type="button">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="address-cards">
+                            <div class="address-card">
+                                <div class="address-card__badge">Primary</div>
+                                <form class="profile-form profile-form--two-cols">
+                                    <div class="form-group">
+                                        <label class="label" for="cardName">Name on Card</label>
+                                        <input class="input" id="cardName" type="text" value="John Doe" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="cardNumber">Card Number</label>
+                                        <input class="input" id="cardNumber" type="text" value="**** **** **** 4242"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="expiry">Expiry Date</label>
+                                        <input class="input" id="expiry" type="text" value="12/26" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="cvc">CVC</label>
+                                        <input class="input" id="cvc" type="text" value="***" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="billingZip">Billing ZIP/Postal Code</label>
+                                        <input class="input" id="billingZip" type="text" value="10001" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="billingCountry">Country</label>
+                                        <input class="input" id="billingCountry" type="text" value="United States"
+                                            required>
+                                    </div>
+                                </form>
+                                <div class="address-card__actions">
+                                    <button class="btn-link">Save</button>
+                                    <button class="btn-link btn-link--danger">Delete</button>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-card__badge">Backup</div>
+                                <form class="profile-form profile-form--two-cols">
+                                    <div class="form-group">
+                                        <label class="label" for="cardName2">Name on Card</label>
+                                        <input class="input" id="cardName2" type="text" value="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="cardNumber2">Card Number</label>
+                                        <input class="input" id="cardNumber2" type="text" value="**** **** **** 1881">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="expiry2">Expiry Date</label>
+                                        <input class="input" id="expiry2" type="text" value="08/25">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="cvc2">CVC</label>
+                                        <input class="input" id="cvc2" type="text" value="***">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="billingZip2">Billing ZIP/Postal Code</label>
+                                        <input class="input" id="billingZip2" type="text" value="10002">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label" for="billingCountry2">Country</label>
+                                        <input class="input" id="billingCountry2" type="text" value="United States">
+                                    </div>
+                                </form>
+                                <div class="address-card__actions">
+                                    <button class="btn-link">Save</button>
                                     <button class="btn-link btn-link--danger">Delete</button>
                                 </div>
                             </div>
@@ -178,64 +328,71 @@
                     </section>
 
                     <!-- Account Security -->
-                    <section class="profile-section">
+                    <section class="profile-section" id="security">
                         <div class="profile-section__header">
                             <h2 class="profile-section__title">Account Security</h2>
+                            <div class="profile-actions">
+                                <button class="btn btn--outline btn--sm" type="button">Cancel</button>
+                                <button class="btn btn--primary btn--sm" type="button">Save</button>
+                            </div>
                         </div>
 
-                        <div class="security-options">
-                            <div class="security-option">
-                                <div class="security-option__info">
-                                    <h3 class="security-option__title">Password</h3>
-                                    <p class="security-option__text">Last changed 3 months ago</p>
-                                </div>
-                                <button class="btn btn--outline btn--sm">Change</button>
+                        <form class="profile-form profile-form--two-cols">
+                            <div class="form-group">
+                                <label class="label" for="currentPassword">Current Password</label>
+                                <input class="input" id="currentPassword" type="password"
+                                    placeholder="Enter current password" required>
                             </div>
 
-                            <div class="security-option">
-                                <div class="security-option__info">
-                                    <h3 class="security-option__title">Two-Factor Authentication</h3>
-                                    <p class="security-option__text">Add an extra layer of security to your account</p>
-                                </div>
-                                <button class="btn btn--outline btn--sm">Enable</button>
+                            <div class="form-group">
+                                <label class="label" for="newPassword">New Password</label>
+                                <input class="input" id="newPassword" type="password" placeholder="Enter new password"
+                                    required>
+                                <p class="form-error">Must be at least 8 characters.</p>
                             </div>
 
-                            <div class="security-option">
-                                <div class="security-option__info">
-                                    <h3 class="security-option__title">Connected Accounts</h3>
-                                    <p class="security-option__text">Google, Apple</p>
-                                </div>
-                                <button class="btn btn--outline btn--sm">Manage</button>
+                            <div class="form-group">
+                                <label class="label" for="confirmPassword">Confirm Password</label>
+                                <input class="input" id="confirmPassword" type="password"
+                                    placeholder="Re-enter password" required>
+                                <p class="form-error">Passwords do not match.</p>
+                            </div>
+
+                            <div class="form-group form-group--inline">
+                                <label class="checkbox">
+                                    <input type="checkbox" checked>
+                                    <span>Enable two-factor authentication</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group form-group--inline">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>Sign out from all devices</span>
+                                </label>
+                            </div>
+                        </form>
+
+                        <div class="password-meter" aria-hidden="true">
+                            <span class="password-meter__fill" style="width: 60%"></span>
+                        </div>
+
+                        <ul class="security-tips">
+                            <li>Use at least 8 characters with numbers and symbols.</li>
+                            <li>Enable multi-factor authentication for sensitive changes.</li>
+                            <li>Avoid reusing passwords across different sites.</li>
+                        </ul>
+
+                        <div class="account-danger">
+                            <h3 class="account-danger__title">Danger Zone</h3>
+                            <p class="account-danger__text">Delete your account and all associated data.</p>
+                            <div class="account-danger__actions">
+                                <a class="btn btn--danger" href="#">Delete Account</a>
+                                <a class="btn btn--outline" href="#">Deactivate Instead</a>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Newsletter Preferences -->
-                    <section class="profile-section">
-                        <div class="profile-section__header">
-                            <h2 class="profile-section__title">Newsletter Preferences</h2>
-                        </div>
-
-                        <div class="newsletter-options">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span>Product updates and new arrivals</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span>Exclusive deals and promotions</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span>Weekly newsletter digest</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span>Market research surveys</span>
-                            </label>
-                        </div>
-                        <button class="btn btn--primary">Save Preferences</button>
-                    </section>
                 </div>
             </div>
         </div>

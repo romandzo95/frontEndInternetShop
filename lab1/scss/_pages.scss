@@ -328,6 +328,12 @@
             font-size: $font-size-base;
         }
     }
+
+    .profile-nav__divider {
+        border: 0;
+        border-top: 1px solid $color-gray-200;
+        margin: $spacing-sm 0;
+    }
 }
 
 .profile-main {
@@ -339,6 +345,7 @@
 .profile-section {
     @include card;
     padding: $spacing-lg;
+    scroll-margin-top: $spacing-3xl;
 }
 
 .profile-section__header {
@@ -742,4 +749,32 @@
     50% {
         box-shadow: 0 0 0 8px rgba($color-primary, 0);
     }
+}
+
+.profile-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: $spacing-md;
+    margin-top: $spacing-md;
+
+    &--two-cols {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+.profile-actions {
+    display: inline-flex;
+    gap: $spacing-xs;
+}
+
+.form-error {
+    color: $color-danger;
+    font-size: $font-size-xs;
+    margin-top: $spacing-xs;
+}
+
+.form-group--inline {
+    align-items: center;
+    gap: $spacing-sm;
+    line-height: 1.4;
 }

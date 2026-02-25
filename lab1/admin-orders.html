@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Orders - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link">Products</a>
+                    <a href="orders.html" class="nav__link">Orders</a>
+                    <a href="admin.html" class="nav__link nav__link--active">Admin</a>
+                </nav>
+
+                <div class="header__actions">
+                    <div class="user-menu">
+                        <button class="user-menu__trigger">
+                            <span class="user-avatar">AD</span>
+                            <span class="user-name">Admin</span>
+                        </button>
+                        <div class="user-menu__dropdown">
+                            <a href="profile.html" class="user-menu__link">My Profile</a>
+                            <a href="orders.html" class="user-menu__link">My Orders</a>
+                            <a href="cart.html" class="user-menu__link">Shopping Cart</a>
+                            <hr class="user-menu__divider">
+                            <a href="index.html" class="user-menu__link">Logout</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content users-page">
+        <div class="container">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Admin · User Orders</h1>
+                    <p class="page-subtitle">View and manage orders by user.</p>
+                </div>
+                <div class="page-actions">
+                    <a class="btn btn--outline" href="admin.html">Back to Admin</a>
+                </div>
+            </div>
+
+            <section class="user-card">
+                <div class="user-card__header">
+                    <div>
+                        <h2 class="user-card__title">Orders by User</h2>
+                        <p class="user-card__subtitle">Filter by user and status</p>
+                    </div>
+                </div>
+
+                <div class="user-list-controls">
+                    <select class="select">
+                        <option value="">All users</option>
+                        <option value="alex.doe">alex.doe</option>
+                        <option value="jane.smith">jane.smith</option>
+                        <option value="mike.lee">mike.lee</option>
+                        <option value="sara.khan">sara.khan</option>
+                    </select>
+                    <select class="select">
+                        <option value="">All statuses</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                    <input class="input" type="search" placeholder="Search orders or users">
+                </div>
+
+                <div class="user-table-wrapper">
+                    <table class="user-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                                <th>Items</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>alex.doe</td>
+                                <td>#ORD-2024-00142</td>
+                                <td>Jan 15, 2024</td>
+                                <td><span class="status-dot status-dot--success"></span> Delivered</td>
+                                <td>$3,048</td>
+                                <td>2</td>
+                                <td class="user-actions">
+                                    <a class="btn-link" href="#">View</a>
+                                    <button class="btn-link btn-link--danger" type="button">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>jane.smith</td>
+                                <td>#ORD-2024-00098</td>
+                                <td>Dec 28, 2023</td>
+                                <td><span class="status-dot status-dot--success"></span> Delivered</td>
+                                <td>$799</td>
+                                <td>1</td>
+                                <td class="user-actions">
+                                    <a class="btn-link" href="#">View</a>
+                                    <button class="btn-link btn-link--danger" type="button">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>mike.lee</td>
+                                <td>#ORD-2024-00056</td>
+                                <td>Jan 20, 2024</td>
+                                <td><span class="status-dot status-dot--info"></span> Shipped</td>
+                                <td>$999</td>
+                                <td>1</td>
+                                <td class="user-actions">
+                                    <a class="btn-link" href="#">View</a>
+                                    <button class="btn-link btn-link--danger" type="button">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>sara.khan</td>
+                                <td>#ORD-2024-00178</td>
+                                <td>Jan 22, 2024</td>
+                                <td><span class="status-dot status-dot--warning"></span> Processing</td>
+                                <td>$1,199</td>
+                                <td>1</td>
+                                <td class="user-actions">
+                                    <a class="btn-link" href="#">View</a>
+                                    <button class="btn-link btn-link--danger" type="button">Cancel</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

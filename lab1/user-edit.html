@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User - ShopTech</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">◈</span>
+                    <span class="logo__text">ShopTech</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="products.html" class="nav__link">Products</a>
+                    <a href="orders.html" class="nav__link">Orders</a>
+                    <a href="users.html" class="nav__link">Users</a>
+                </nav>
+
+                <div class="header__actions">
+                    <div class="user-menu">
+                        <button class="user-menu__trigger">
+                            <span class="user-avatar">AD</span>
+                            <span class="user-name">Alex Doe</span>
+                        </button>
+                        <div class="user-menu__dropdown">
+                            <a href="profile.html" class="user-menu__link">My Profile</a>
+                            <a href="orders.html" class="user-menu__link">My Orders</a>
+                            <a href="cart.html" class="user-menu__link">Shopping Cart</a>
+                            <hr class="user-menu__divider">
+                            <a href="index.html" class="user-menu__link">Logout</a>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="btn btn--primary">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content user-edit-page">
+        <div class="container">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Edit User</h1>
+                    <p class="page-subtitle">Update account details, role, and security settings.</p>
+                </div>
+                <div class="page-actions">
+                    <a class="btn btn--outline" href="users.html">Back to Users</a>
+                    <button class="btn btn--danger" type="button">Delete User</button>
+                </div>
+            </div>
+
+            <!-- Error notification -->
+            <div class="alert alert--error" role="alert">
+                <div class="alert__icon">!</div>
+                <div class="alert__content">
+                    <h3 class="alert__title">Validation errors</h3>
+                    <p class="alert__text">Please resolve the highlighted fields below.</p>
+                </div>
+                <button class="alert__close" type="button" aria-label="Dismiss">×</button>
+            </div>
+
+            <section class="user-card">
+                <div class="user-card__header">
+                    <div>
+                        <h2 class="user-card__title">Account Details</h2>
+                        <p class="user-card__subtitle">Basic information and role</p>
+                    </div>
+                    <span class="role-badge role-badge--admin">Admin</span>
+                </div>
+
+                <form class="form-grid">
+                    <div class="form-group">
+                        <label class="label" for="username">Username</label>
+                        <input class="input input--error" id="username" type="text" value="alex.doe" required>
+                        <p class="form-error">Username already taken.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="email">Email</label>
+                        <input class="input" id="email" type="email" value="alex.doe@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="role">Role</label>
+                        <select class="select" id="role" required>
+                            <option value="admin" selected>Admin</option>
+                            <option value="regular">Regular</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="status">Status</label>
+                        <select class="select" id="status" required>
+                            <option value="active" selected>Active</option>
+                            <option value="pending">Pending</option>
+                            <option value="disabled">Disabled</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="phone">Phone</label>
+                        <input class="input" id="phone" type="tel" value="+1 (555) 234-5678">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="timezone">Timezone</label>
+                        <select class="select" id="timezone">
+                            <option value="europe-kiev" selected>UTC+2 (Europe/Kiev)</option>
+                            <option value="utc">UTC</option>
+                            <option value="est">UTC-5 (EST)</option>
+                        </select>
+                    </div>
+                </form>
+            </section>
+
+            <section class="user-card">
+                <div class="user-card__header">
+                    <div>
+                        <h2 class="user-card__title">Security</h2>
+                        <p class="user-card__subtitle">Reset password and manage MFA</p>
+                    </div>
+                </div>
+
+                <form class="form-grid">
+                    <div class="form-group">
+                        <label class="label" for="newPassword">New Password</label>
+                        <input class="input" id="newPassword" type="password" placeholder="Enter new password">
+                        <p class="form-error">Must be at least 8 characters.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="confirmNewPassword">Confirm Password</label>
+                        <input class="input" id="confirmNewPassword" type="password" placeholder="Re-enter password">
+                        <p class="form-error">Passwords do not match.</p>
+                    </div>
+
+                    <div class="form-group form-group--inline">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span>Require password reset on next login</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group form-group--inline">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span>Enable multi-factor authentication</span>
+                        </label>
+                    </div>
+                </form>
+            </section>
+
+            <section class="user-card">
+                <div class="user-card__header">
+                    <div>
+                        <h2 class="user-card__title">Activity</h2>
+                        <p class="user-card__subtitle">Recent sign-ins and status</p>
+                    </div>
+                </div>
+
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div>
+                            <p class="activity-title">Successful login</p>
+                            <p class="activity-meta">Feb 20, 2024 · Kyiv · Chrome on Windows</p>
+                        </div>
+                        <span class="status-dot status-dot--success"></span>
+                    </div>
+                    <div class="activity-item">
+                        <div>
+                            <p class="activity-title">Password changed</p>
+                            <p class="activity-meta">Feb 12, 2024 · Kyiv</p>
+                        </div>
+                        <span class="status-dot status-dot--info"></span>
+                    </div>
+                    <div class="activity-item">
+                        <div>
+                            <p class="activity-title">Login failed (invalid password)</p>
+                            <p class="activity-meta">Feb 10, 2024 · Kyiv</p>
+                        </div>
+                        <span class="status-dot status-dot--danger"></span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <a class="btn btn--outline" href="users.html">Cancel</a>
+                <button class="btn btn--primary" type="submit">Save Changes</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">◈</span>
+                        <span class="logo__text">ShopTech</span>
+                    </a>
+                    <p class="footer__text">Your premium destination for the latest electronics and tech products.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Account</h4>
+                    <ul class="footer__links">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="orders.html">Order History</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li>support@shoptech.com</li>
+                        <li>1-800-SHOPTECH</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 ShopTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

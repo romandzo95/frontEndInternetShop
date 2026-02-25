@@ -1,0 +1,392 @@
+// ===========================================
+// Users Management Page
+// ===========================================
+
+.users-page,
+.user-edit-page {
+    .page-header {
+        @include flex-between;
+        align-items: flex-start;
+        margin-bottom: $spacing-lg;
+
+        .page-title {
+            margin-bottom: $spacing-xs;
+        }
+
+        .page-subtitle {
+            color: $text-secondary;
+        }
+
+        .page-actions {
+            @include flex-center;
+            gap: $spacing-sm;
+            flex-wrap: wrap;
+        }
+    }
+
+    .user-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: $spacing-lg;
+
+        @include md {
+            grid-template-columns: 1.6fr 1fr;
+        }
+
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .user-card {
+        @include card;
+        padding: $spacing-lg;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+
+        .user-card__header {
+            @include flex-between;
+            gap: $spacing-md;
+            align-items: center;
+        }
+
+        .user-card__title {
+            @include heading($font-size-xl);
+            margin-bottom: $spacing-xs;
+        }
+
+        .user-card__subtitle {
+            color: $text-secondary;
+        }
+    }
+
+    .user-list-controls {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: $spacing-sm;
+
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .user-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .user-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: $font-size-sm;
+
+        th,
+        td {
+            padding: $spacing-sm $spacing-md;
+            text-align: left;
+            border-bottom: 1px solid $border-color;
+        }
+
+        thead th {
+            color: $text-secondary;
+            font-weight: $font-weight-semibold;
+        }
+
+        tbody tr {
+            transition: background-color $transition-fast;
+
+            &.is-active,
+            &:hover {
+                background-color: $color-gray-50;
+            }
+        }
+
+        .user-actions {
+            display: inline-flex;
+            gap: $spacing-sm;
+        }
+    }
+
+    .role-badge {
+        @include badge($color-gray-200, $text-primary);
+
+        &--admin {
+            background-color: rgba($color-primary, 0.12);
+            color: $color-primary;
+        }
+
+        &--regular {
+            background-color: rgba($color-secondary, 0.12);
+            color: $color-secondary;
+        }
+    }
+
+    .status-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: $spacing-xs;
+
+        &--success {
+            background-color: $color-success;
+        }
+
+        &--warning {
+            background-color: $color-warning;
+        }
+
+        &--danger {
+            background-color: $color-danger;
+        }
+
+        &--info {
+            background-color: $color-info;
+        }
+
+        &--muted {
+            background-color: $text-muted;
+        }
+    }
+
+    .user-details {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+    }
+
+    .user-summary {
+        @include flex-start;
+        gap: $spacing-md;
+    }
+
+    .user-avatar {
+        @include flex-center;
+        background-color: rgba($color-primary, 0.1);
+        color: $color-primary;
+        border-radius: $radius-full;
+        font-weight: $font-weight-semibold;
+
+        &--lg {
+            width: 64px;
+            height: 64px;
+            font-size: $font-size-lg;
+        }
+    }
+
+    .user-name {
+        @include heading($font-size-lg);
+    }
+
+    .user-email,
+    .user-meta {
+        color: $text-secondary;
+    }
+
+    .user-fields {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: $spacing-md;
+    }
+
+    .user-field {
+        dt {
+            color: $text-secondary;
+            margin-bottom: $spacing-xs;
+            font-weight: $font-weight-medium;
+        }
+
+        dd {
+            margin: 0;
+            color: $text-primary;
+        }
+    }
+
+    .user-actions-row {
+        display: flex;
+        gap: $spacing-sm;
+        flex-wrap: wrap;
+    }
+
+    .modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: $z-modal;
+
+        &:target {
+            display: flex;
+        }
+
+        &--visible {
+            display: flex;
+        }
+
+        .modal__backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba($color-black, 0.4);
+        }
+
+        .modal__dialog {
+            position: relative;
+            background: $color-white;
+            border-radius: $radius-lg;
+            box-shadow: $shadow-lg;
+            width: min(640px, 90%);
+            padding: $spacing-lg;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-md;
+        }
+
+        .modal__header {
+            @include flex-between;
+            gap: $spacing-sm;
+        }
+
+        .modal__title {
+            @include heading($font-size-xl);
+        }
+
+        .modal__close {
+            background: none;
+            border: none;
+            font-size: $font-size-xl;
+            cursor: pointer;
+            color: $text-secondary;
+            transition: color $transition-fast;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+        .modal__body {
+            display: grid;
+            gap: $spacing-md;
+        }
+
+        .modal__footer {
+            @include flex-end;
+            gap: $spacing-sm;
+        }
+    }
+
+    .alert {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: $spacing-sm;
+        align-items: center;
+        padding: $spacing-sm $spacing-md;
+        border-radius: $radius-md;
+        border: 1px solid transparent;
+        margin-bottom: $spacing-md;
+
+        &__icon {
+            @include flex-center;
+            width: 32px;
+            height: 32px;
+            border-radius: $radius-full;
+            font-weight: $font-weight-bold;
+        }
+
+        &__title {
+            font-weight: $font-weight-semibold;
+        }
+
+        &__text {
+            color: $text-secondary;
+        }
+
+        &__close {
+            background: none;
+            border: none;
+            font-size: $font-size-lg;
+            cursor: pointer;
+            color: $text-secondary;
+            transition: color $transition-fast;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+        &--error {
+            background: rgba($color-danger, 0.08);
+            border-color: rgba($color-danger, 0.2);
+
+            .alert__icon {
+                background: rgba($color-danger, 0.15);
+                color: $color-danger;
+            }
+        }
+
+        &--success {
+            background: rgba($color-success, 0.08);
+            border-color: rgba($color-success, 0.2);
+
+            .alert__icon {
+                background: rgba($color-success, 0.15);
+                color: $color-success;
+            }
+        }
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: $spacing-md;
+    }
+
+    .form-group--inline {
+        display: flex;
+        align-items: center;
+        padding-top: $spacing-sm;
+    }
+
+    .form-error {
+        color: $color-danger;
+        font-size: $font-size-xs;
+        margin-top: $spacing-xs;
+    }
+
+    .input--error,
+    .select--error {
+        border-color: $color-danger;
+        box-shadow: 0 0 0 3px rgba($color-danger, 0.1);
+    }
+
+    .activity-list {
+        display: grid;
+        gap: $spacing-sm;
+    }
+
+    .activity-item {
+        @include flex-between;
+        align-items: center;
+        padding: $spacing-sm $spacing-md;
+        border: 1px solid $border-color;
+        border-radius: $radius-md;
+        background: $color-white;
+    }
+
+    .activity-title {
+        font-weight: $font-weight-semibold;
+        margin-bottom: $spacing-xs;
+    }
+
+    .activity-meta {
+        color: $text-secondary;
+        font-size: $font-size-sm;
+    }
+
+    .form-actions {
+        margin-top: $spacing-lg;
+        display: flex;
+        gap: $spacing-sm;
+        flex-wrap: wrap;
+    }
+}
