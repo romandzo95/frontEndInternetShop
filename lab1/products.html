@@ -122,9 +122,20 @@
                     <!-- Sort & View Options -->
                     <div class="products-toolbar">
                         <p class="products-count">Showing 24 of 130 products</p>
+
+                        <form class="products-search" role="search">
+                            <label class="sr-only" for="product-search">Search products</label>
+                            <div class="products-search__field">
+                                <span class="products-search__icon">🔍</span>
+                                <input id="product-search" name="q" type="search" class="input"
+                                    placeholder="Search products...">
+                            </div>
+                            <button type="submit" class="btn btn--primary">Search</button>
+                        </form>
+
                         <div class="products-sort">
-                            <label>Sort by:</label>
-                            <select class="select">
+                            <label for="products-sort">Sort by:</label>
+                            <select id="products-sort" class="select">
                                 <option>Newest First</option>
                                 <option>Price: Low to High</option>
                                 <option>Price: High to Low</option>

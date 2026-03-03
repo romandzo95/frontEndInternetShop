@@ -186,6 +186,10 @@ table {
     @include visually-hidden;
 }
 
+.visually-hidden {
+    @include visually-hidden;
+}
+
 // Responsive utilities
 @include md {
     .page-title {
