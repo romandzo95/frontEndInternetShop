@@ -1,0 +1,16 @@
+{
+    "name": "lab2",
+    "version": "1.0.0",
+    "description": "API fetch demo for front-end internet shop lab 2",
+    "type": "module",
+    "scripts": {
+        "dev": "serve -l 5173 .",
+        "lint": "eslint . --ext .js"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "^9.10.0",
+        "serve": "^14.2.0"
+    }
+}
